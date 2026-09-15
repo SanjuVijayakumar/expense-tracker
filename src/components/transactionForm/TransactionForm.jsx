@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-const TransactionForm = ({ setTransations }) => {
-    console.log(setTransations, "settransaction hits here");
+const TransactionForm = ({ setTransactions }) => {
+    console.log(setTransactions, "settransaction hits here");
     
   const [type, setType] = useState("expense");
 
@@ -98,7 +98,7 @@ const TransactionForm = ({ setTransations }) => {
         </div>
 
         {/* Form */}
-        <form className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
 
           {/* Description */}
           <div>

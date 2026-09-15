@@ -99,7 +99,12 @@ const TransactionList = ({ transactions, setTransactions }) => {
                     <span className="text-slate-300">•</span>
 
                     <span className="text-xs text-slate-400">
-                      {transaction.date}
+                      {/* {transaction.date} */}
+                      {new Date(transaction.date).toLocaleDateString("en-IN", {
+                        day: "2-digit",
+                        month: "short",
+                        year: "numeric",
+                      })}
                     </span>
                   </div>
                 </div>
